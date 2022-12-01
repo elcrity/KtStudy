@@ -1,0 +1,12 @@
+1) ?.
+foo?.bar() -> foo != null -> foo.bar()
+           -> foo == null -> null
+2) ?:
+foo ?: bar -> foo != null -> foo
+          -> foo == null -> bar
+3) as?
+foo as? Type -> foo is Type -> foo를 대상 타입으로 변환
+             -> foo !is Type -> null
+4) !!
+foo!! -> foo != null -> foo
+      -> foo == null -> NUllPointerException
